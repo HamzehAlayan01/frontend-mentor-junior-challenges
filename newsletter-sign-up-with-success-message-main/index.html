@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Libre+Baskerville&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel = "stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,35 +21,48 @@
 
   <!-- Sign-up form start -->
 
-  <h1>Stay updated!</h1>
-
-  <p>Join 60,000+ product managers receiving monthly updates on:</p>
-
-  <img src="assets/images/icon-list.svg" alt="checkmark within orange circle" <p>Product discovery and building what matters</p>
-  <img src="assets/images/icon-list.svg" alt="checkmark within orange circle"<p>Measuring to ensure updates are a success</p>
-  <img src="assets/images/icon-list.svg" alt="checkmark within orange circle"<p>And much more!</p>
-
-  <p class="email-label"><label for="email">Email address</label></p>
-  <input type="email" id="email" name="email" class="email-field">email@company.com</input>
-
-  <button class="sub-btn">Subscribe to monthly newsletter</button>
+  <div class="wrapper">
+    <div class="first-half">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <div class="about-item-box">
+        <div class="about-item">
+          <img src="assets/images/icon-list.svg" alt="checkmark within orange circle">
+           <p>Product discovery and building what matters</p></div>
+        <div class="about-item">
+          <img src="assets/images/icon-list.svg" alt="checkmark within orange circle">
+          <p>Measuring to ensure updates are a success</p></div>
+        <div class="about-item">
+          <img src="assets/images/icon-list.svg" alt="checkmark within orange circle">
+          <p>And much more!</p></div>
+      </div>
+      <div class="input-box">
+        <p class="email-label"><label for="email">Email address</label></p>
+        <input type="email" id="email" name="email" class="email-field" placeholder="email@company.com"></input>
+      </div>
+      <button class="sub-btn">Subscribe to monthly newsletter</button>
+    </div>
+    <div class="second-half">
+      <img class="main-img" src="assets/images/illustration-sign-up-desktop.svg" alt="monitor, a tab open, and a graph trending up">
+    </div>
+  </div>
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
 
-  Thanks for subscribing!
+  <!-- Thanks for subscribing!
 
   A confirmation email has been sent to ash@loremcompany.com. 
   Please open it and click the button inside to confirm your subscription.
 
-  Dismiss message
+  Dismiss message -->
 
   <!-- Success message end -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
