@@ -64,7 +64,9 @@ body{
     border-radius:5px;
     margin-top: 8px;
 }
-
+.input-box input:focus{
+    border: 1px solid black;
+}
 .first-half button{
     width:80%;
     background-color: hsl(234, 29%, 20%);
@@ -72,4 +74,11 @@ body{
     border-radius:5px;
     color:white;
     padding:15px;
+    transition: background 0.8 ease-in;
+}
+.first-half button:hover{
+    background: linear-gradient(to right, hsl(4, 84%, 76%), hsl(4, 100%, 67%));
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
