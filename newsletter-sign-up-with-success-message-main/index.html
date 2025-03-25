@@ -37,16 +37,25 @@
           <p>And much more!</p></div>
       </div>
       <div class="input-box">
-        <p class="email-label"><label for="email">Email address</label></p>
+        <div class="label-validation-box">
+          <p class="email-label"><label for="email">Email address</label></p><p id="result"></p>
+        </div>
         <input type="email" id="email" name="email" class="email-field" placeholder="email@company.com"></input>
       </div>
-      <button class="sub-btn">Subscribe to monthly newsletter</button>
+      <button class="sub-btn" id="subBtn">Subscribe to monthly newsletter</button>
     </div>
     <div class="second-half">
       <img class="main-img" src="assets/images/illustration-sign-up-desktop.svg" alt="monitor, a tab open, and a graph trending up">
     </div>
   </div>
 
+  <div class="success-message">
+    <img src="./assets/images/icon-success.svg" alt="checkmark">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to ash@loremcompany.com.
+      Please open it and click the button inside to confirm your subscription.</p>
+    <button class="dismiss-button" >Dismiss message</button>
+  </div>
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
@@ -65,4 +74,5 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 </body>
+<script src="script.js"></script>
 </html>

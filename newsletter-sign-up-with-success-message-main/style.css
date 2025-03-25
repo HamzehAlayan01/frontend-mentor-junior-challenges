@@ -61,6 +61,11 @@ body{
     font-weight:500;
     font-size:14px;
 }
+.label-validation-box{
+    display:flex;
+    justify-content: space-between;
+    font-size:14px;
+}
 .input-box input{
     width:100%;
     padding:15px;
@@ -85,3 +90,36 @@ body{
     cursor: pointer;
     border: 2px solid transparent;
 }
+
+.success-message{
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: white;
+    width:450px;
+    height:450px;
+    border-radius:25px;
+}
+.success-message h1{
+    font: hsl(235, 18%, 26%);
+    font-size:3rem;
+}
+.success-message .dismiss-button{
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    height:42px;
+    border-radius: 5px;
+    font-weight:bold;
+}
+.success-message img{
+    width:50px;
+    height:50px;
+}
+
+.dismiss-button:hover{
+    background: linear-gradient(to right, hsl(4, 84%, 76%), hsl(4, 100%, 67%));
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
