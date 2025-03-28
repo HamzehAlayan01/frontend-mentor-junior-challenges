@@ -155,4 +155,15 @@ body{
         padding: 0;
         object-fit:cover;
     }
+    .success-message{
+        height: 100vh;
+        justify-content:flex-start;
+        gap: 20px;
+    }
+    .success-message img{
+        margin-top:100px;
+    }
+    .success-message button{
+        margin-top: auto;
+    }
 }
