@@ -32,39 +32,45 @@ async function getDataAndPopulateDom(){
     let response = await fetch('/data.json');
     let data = await response.json();
     data = Object.entries(data);
+    console.log(data);
+    
     if(data){
         data.forEach((item)=>{
             let cardDiv = document.createElement('div');
             let cardImg = document.createElement('img');
             let cardTitleDiv = document.createElement('div');
-            let cardTimeTracked = document.createElement('h2');
+            let cardTimeTracked = document.createElement('h1');
             let cardPreviousTimeTracked = document.createElement('p');
+            cardDiv.classList.add("card");
+            cardTitleDiv.classList.add("card__title")
         
+        
+            cardTitleDiv.innerHTML = `<p>${item[1].title}</p> <img src="images/icon-ellipsis.svg" alt="ellipsis"`;
+            
+            if(selectedTimeFrame === 'daily'){
+                cardTimeTracked.innerHTML = `${item[1].timeframes.daily.current}hrs`;
+                cardPreviousTimeTracked.innerHTML = `Yesterday - ${item[1].timeframes.daily.previous}hrs`;
+            }
+        
+            else if(selectedTimeFrame === 'weekly'){
+                cardTimeTracked.innerHTML = `${item[1].timeframes.weekly.current}hrs`;
+                cardPreviousTimeTracked.innerHTML = `Last Week - ${item[1].timeframes.weekly.previous}hrs`;
+            }
+        
+            else if(selectedTimeFrame === 'monthly'){
+                cardTimeTracked.innerHTML = `${item[1].timeframes.monthly.current}hrs`;
+                cardPreviousTimeTracked.innerHTML = `Last Month - ${item[1].timeframes.monthly.previous}hrs`;
+            }
             cardDiv.appendChild(cardImg);
             cardDiv.appendChild(cardTitleDiv);
             cardDiv.appendChild(cardTimeTracked);
             cardDiv.appendChild(cardPreviousTimeTracked);
-        
-            cardTitleDiv.innerHTML = `<p>${item.title}</p> <img src="images/icon-ellipsis.svg" alt="ellipsis"`;
-            
-            if(selectedTimeFrame === 'daily'){
-                cardTimeTracked.innerHTML = `${item.daily.current}hrs`;
-                cardPreviousTimeTracked.innerHTML = `Yesterday - ${item.daily.previous}hrs`;
-            }
-        
-            else if(selectedTimeFrame === 'weekly'){
-                cardTimeTracked.innerHTML = `${item.weekly.current}hrs`;
-                cardPreviousTimeTracked.innerHTML = `Last Week - ${item.weekly.previous}hrs`;
-            }
-        
-            else if(selectedTimeFrame === 'monthly'){
-                cardTimeTracked.innerHTML = `${item.monthly.current}hrs`;
-                cardPreviousTimeTracked.innerHTML = `Last Month - ${item.monthly.previous}hrs`;
-            }
             cardSection.appendChild(cardDiv);
         })
 }
 }
+
+document.addEventListener('DOMContentLoaded', getDataAndPopulateDom());
 
 
 

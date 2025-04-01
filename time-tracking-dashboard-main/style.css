@@ -4,17 +4,14 @@
     box-sizing: border-box;
 }
 
-root{
+:root{
 --Purple-600: hsl(246, 80%, 60%);
-
 --Orange-300-work: hsl(15, 100%, 70%);
 --Blue-300-play: hsl(195, 74%, 62%);
 --Pink-400-study: hsl(348, 100%, 68%);
 --Green-400-exercise: hsl(145, 58%, 55%);
 --Purple-700-social: hsl(264, 64%, 52%);
 --Yellow-300-self-care: hsl(43, 84%, 65%);
-
-
 --Navy-950: hsl(226, 43%, 10%);
 --Navy-900: hsl(235, 46%, 20%);
 --Purple-500: hsl(235, 45%, 61%);
@@ -22,6 +19,79 @@ root{
 
 font-family: 'Rubik', sans-serif;
 }
+
+body{
+    background-color: var(--Navy-950);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+main{
+    width:80%;
+    height:60%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:15px;
+}
+.dashboard{
+    grid-row: span 2;
+}
+.dashboard__report{
+    background-color: var(--Purple-600);
+    display:flex;
+    flex-direction: column;
+    padding:25px;
+}
+.dashboard__report img{
+    height:60px;
+    width:60px;
+    border:1px solid white;
+    border-radius: 50%;
+}
+.dashboard__timeframes{
+    background-color: var(--Navy-900);
+    padding:25px;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    color: var(--Purple-500);
+    font-weight:100;
+}
+.dashboard__timeframes p:hover{
+    cursor: pointer;
+}
+.dashboard__timeframes p.selected{
+    color:white;
+    font-weight: 300;
+}
+.card{
+    background-color: var(--Navy-900);
+    color: white;
+    width:200px;
+    height:200px;
+    padding:25px;
+}
+.card__title{
+    display:flex;
+    justify-content: space-between;
+    color:white;
+    font-weight:bold;
+}
+.card h1{
+    margin-top:25px;
+    font-size: 2.5rem;
+}
+.card p{
+    color: var(--Purple-500);
+    font-weight:200;
+    margin-top:8px;
+    font-size:0.9rem;
+}
+
+
 
 
 
